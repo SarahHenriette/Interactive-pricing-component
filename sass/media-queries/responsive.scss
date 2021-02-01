@@ -1,0 +1,111 @@
+@media (min-width: 1201px) and (max-width: 1300px) {
+    body {
+        .img-background img{
+            width: auto;
+        }
+        .main {
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 951px) and (max-width: 1200px) {
+    body {
+        .img-background img{
+            width: auto;
+        }
+        .main {
+            width: 55%;
+        }
+    }
+}
+@media (min-width: 711px) and (max-width: 950px) {
+    body {
+        .img-background img{
+            width: auto;
+        }
+        .main {
+            width: 75%;
+        }
+    }
+}
+@media (min-width: 0px) and (max-width: 710px) {
+    body {
+        background-color: $very-pale-blue;
+        .img-background {
+            width: 100%;
+            overflow: hidden;
+            img {
+                width: auto;
+            }
+        }
+        .header {
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                width: 51%;
+                line-height: 16px;
+                text-align: center;
+            }
+        }
+        .main {
+            width: 90%;
+            box-shadow: #eaeefb 0px 0px 12px;
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 27px;
+                .tariff-bar-mobile {
+                    display: block;
+                }
+                .page-views {
+                    font-size: 13px;
+                }
+                .month {
+                    span {
+                        font-size: 33px;
+                    }
+                }
+            }
+            .body {
+                .tariff-bar {
+                    display: none;
+                }
+                .infos-bar {
+                    width: 85%;
+                    padding-bottom: 13%;
+                    justify-content: center;
+                    p {
+                        font-size: 13px;
+                    }
+                    .monthly-billing {
+                        margin-right: 10px;
+                    }
+                    .yearly-billing {
+                        .badge {
+                          display: none;
+                        }
+                        .badge-mobile {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            footer {
+                flex-direction: column;
+                padding: 30px 55px;
+                .items-checked {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    line-height: 27px;
+                }
+                .btn-start {
+                    margin-top: 40px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

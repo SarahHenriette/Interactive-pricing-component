@@ -1,0 +1,300 @@
+.tariff-bar, body .main header .tariff-bar-mobile, .tariff-bar-mobile {
+  height: 50px;
+  width: 100%;
+  padding-bottom: 3%;
+}
+.tariff-bar .bar, body .main header .tariff-bar-mobile .bar, .tariff-bar-mobile .bar {
+  height: 10px;
+  width: 80%;
+  margin: auto;
+  border-radius: 60px;
+  background-color: #eaeefb;
+}
+.tariff-bar .bar .value-bar, .tariff-bar-mobile .bar .value-bar {
+  width: 50%;
+  height: 10px;
+  border-radius: 60px;
+  background-color: #a5f3eb;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.tariff-bar .bar .value-bar .btn-value-bar, .tariff-bar-mobile .bar .value-bar .btn-value-bar {
+  width: 40px;
+  height: 40px;
+  background-color: #10d5c2;
+  position: absolute;
+  right: 0;
+  border-radius: 50px;
+  box-shadow: -2px 15px 20px #a5f3eb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tariff-bar .bar .value-bar .btn-value-bar:hover, .tariff-bar-mobile .bar .value-bar .btn-value-bar:hover {
+  cursor: pointer;
+}
+.tariff-bar .bar .value-bar .btn-value-bar i, .tariff-bar-mobile .bar .value-bar .btn-value-bar i {
+  color: #a5f3eb;
+}
+
+.tariff-bar-mobile {
+  padding-top: 16%;
+}
+.tariff-bar-mobile .bar {
+  width: 100% !important;
+}
+
+.badge, .badge-mobile {
+  font-size: 10px;
+  font-weight: 800;
+  background-color: #feece7;
+  color: #ff8c66;
+  padding: 5px 7px;
+  border-radius: 10px;
+  margin-left: 7px;
+}
+
+.badge-mobile {
+  display: none;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #fafbff;
+}
+body p {
+  font-size: 15px;
+  color: #858fad;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+body .img-background {
+  overflow: hidden;
+}
+body .img-background img {
+  width: 100%;
+}
+body .header {
+  position: absolute;
+  height: 230px;
+  top: 0%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 10px;
+}
+body .header img {
+  position: absolute;
+}
+body .header h1 {
+  font-weight: 800;
+  font-size: 28px;
+  color: #293356;
+}
+body .header h1, body .header p {
+  z-index: 5;
+}
+body .main {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 55%;
+  width: 41%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: #eaeefb 0px 0px 100px;
+  background-color: white;
+}
+body .main header {
+  padding: 40px 55px;
+  display: flex;
+  justify-content: space-between;
+}
+body .main header .page-views {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+body .main header .tariff-bar-mobile {
+  display: none;
+}
+body .main header .month {
+  font-size: 15px;
+}
+body .main header .month span {
+  font-size: 50px;
+  color: #293356;
+  font-weight: 800;
+}
+body .main .body {
+  display: flex;
+  flex-direction: column;
+}
+body .main .body .infos-bar {
+  height: 20px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 8%;
+}
+body .main .body .infos-bar .monthly-billing {
+  margin-right: 20px;
+  display: flex;
+}
+body .main .body .infos-bar .monthly-billing .toggle {
+  width: 35px;
+  height: 20px;
+  background-color: #eaeefb;
+  border-radius: 40px;
+  margin-left: 7px;
+  display: flex;
+  align-items: center;
+  padding: 1px 3px;
+}
+body .main .body .infos-bar .monthly-billing .toggle .circle-toggle {
+  height: 15px;
+  width: 15px;
+  z-index: 10;
+  background-color: white;
+  border-radius: 50px;
+}
+body .main .hr {
+  background-color: #eaeefb;
+  margin: 0;
+  width: 100%;
+  height: 1px;
+}
+body .main footer {
+  padding: 40px 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main footer .items-checked {
+  font-weight: 600;
+}
+body .main footer .items-checked p svg {
+  margin-right: 17px;
+}
+body .main footer .btn-start {
+  background-color: #293356;
+  border-radius: 50px;
+  border: none;
+  height: 45px;
+  width: 181px;
+  color: #858fad;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (min-width: 1201px) and (max-width: 1300px) {
+  body .img-background img {
+    width: auto;
+  }
+  body .main {
+    width: 50%;
+  }
+}
+@media (min-width: 951px) and (max-width: 1200px) {
+  body .img-background img {
+    width: auto;
+  }
+  body .main {
+    width: 55%;
+  }
+}
+@media (min-width: 711px) and (max-width: 950px) {
+  body .img-background img {
+    width: auto;
+  }
+  body .main {
+    width: 75%;
+  }
+}
+@media (min-width: 0px) and (max-width: 710px) {
+  body {
+    background-color: #fafbff;
+  }
+  body .img-background {
+    width: 100%;
+    overflow: hidden;
+  }
+  body .img-background img {
+    width: auto;
+  }
+  body .header h1 {
+    font-size: 20px;
+  }
+  body .header p {
+    width: 51%;
+    line-height: 16px;
+    text-align: center;
+  }
+  body .main {
+    width: 90%;
+    box-shadow: #eaeefb 0px 0px 12px;
+  }
+  body .main header {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 27px;
+  }
+  body .main header .tariff-bar-mobile {
+    display: block;
+  }
+  body .main header .page-views {
+    font-size: 13px;
+  }
+  body .main header .month span {
+    font-size: 33px;
+  }
+  body .main .body .tariff-bar, body .main .body .tariff-bar-mobile {
+    display: none;
+  }
+  body .main .body .infos-bar {
+    width: 85%;
+    padding-bottom: 13%;
+    justify-content: center;
+  }
+  body .main .body .infos-bar p {
+    font-size: 13px;
+  }
+  body .main .body .infos-bar .monthly-billing {
+    margin-right: 10px;
+  }
+  body .main .body .infos-bar .yearly-billing .badge, body .main .body .infos-bar .yearly-billing .badge-mobile {
+    display: none;
+  }
+  body .main .body .infos-bar .yearly-billing .badge-mobile {
+    display: block;
+  }
+  body .main footer {
+    flex-direction: column;
+    padding: 30px 55px;
+  }
+  body .main footer .items-checked {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 27px;
+  }
+  body .main footer .btn-start {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
