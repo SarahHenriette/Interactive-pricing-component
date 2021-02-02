@@ -24,7 +24,7 @@ body {
     .header {
         position: absolute;
         height: 230px;
-        top: 0%;
+        top: 9%;
         left: 0;
         right: 0;
         margin: auto;
@@ -45,83 +45,95 @@ body {
             z-index: 5;
         }
     }
-
     .main {
         position: absolute;
         margin: auto;
         left: 0;
         right: 0;
         top: 55%;
-        width: 41%;
+        width: 35%;
         height: auto;
         border-radius: 15px;
         box-shadow: $light-grayish-blue-slider 0px 0px 100px;
         background-color: $white;
-        header {
-            padding: 40px 55px;
-            display: flex;
-            justify-content: space-between;
-            .page-views {
-                text-transform: uppercase;
-                font-weight: $weight-normal;
-                font-size: 15px;
-                letter-spacing: 2px;
-                span {
-                    margin-right: 10px;
-                }
+        padding: 40px 55px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 0.5fr 0.2fr 0.5fr;
+        .page-views {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            text-transform: uppercase;
+            font-weight: $weight-normal;
+            font-size: 15px;
+            letter-spacing: 2px;
+            height: 144px;
+            span {
+                margin-right: 10px;
             }
-            .month {
-                font-size: 15px;
-                span {
-                    font-size: 50px;
-                    color: $dark-desaturated-blue;
-                    font-weight: $weight-bold;
-                }
+        }
+        .month {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+            font-size: 15px;
+            justify-content: flex-end;
+            height: 144px;
+            span {
+                font-size: 50px;
+                color: $dark-desaturated-blue;
+                font-weight: $weight-bold;
+                margin-right: 8px;
             }
-        }   
-        .body {
+        }
+        .infos-bar {
+            grid-column: 1 / span 2;
+            grid-row: 3 / span 1;
+            height: 20px;
+            width: 80%;
+            margin: auto;
             display: flex;
-            flex-direction: column;
-            .infos-bar {
-                height: 20px;
-                width: 70%;
-                margin: auto;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding-bottom: 8%;
+            .monthly-billing {
+                margin-right: 20px;
                 display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                padding-bottom: 8%;
-                .monthly-billing {
-                    margin-right: 20px;
+                justify-content: center;
+                align-items: center;
+                font-weight: $weight-normal;
+                .toggle {
+                    width: 50px;
+                    height: 28px;
+                    background-color: $light-grayish-blue-slider;
+                    border-radius: 40px;
+                    margin-left: 7px;
                     display: flex;
-                    .toggle {
-                        width: 35px;
-                        height: 20px;
-                        background-color: $light-grayish-blue-slider;
-                        border-radius: 40px;
-                        margin-left: 7px;
-                        display: flex;
-                        align-items: center;
-                        padding: 1px 3px;
-                    }
-                    .toggle .circle-toggle {
-                        height: 15px;
-                        width: 15px;
-                        z-index: 10;
-                        background-color: $white;
-                        border-radius: 50px;
-                  
-                    }
+                    align-items: center;
+                    padding: 1px 3px;
                 }
+                .toggle .circle-toggle {
+                    height: 25px;
+                    width: 25px;
+                    z-index: 10;
+                    background-color: $white;
+                    border-radius: 50px;
+                }
+            }
+            .yearly-billing {
+                font-weight: $weight-normal;
             }
         }
         .hr {
+            grid-column: 1 / span 2;
+            grid-row: 4 / span 1;
             background-color: $light-grayish-blue-slider;
             margin: 0;
             width: 100%;
             height: 1px;
         }
         footer {
-            padding: 40px 55px;
+            grid-column: 1 / span 2;
+            grid-row: 5 / span 1;
             display: flex;
             justify-content: space-between;
             align-items: center;
