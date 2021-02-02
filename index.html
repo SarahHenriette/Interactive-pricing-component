@@ -20,24 +20,27 @@
     </header>
     <section class="main">
       <header>
-        <p class="page-views">100K Pageviews</p>
-        <div class="tariff-bar-mobile">
-          <div class="bar">
-            <div class="value-bar">
-              <div class="btn-value-bar"></div>
-            </div>
+        <p class="page-views"><span id="page-view"></span>Pageviews</p>
+        <!-- <div class="bar-slider-mobile" >
+          <input type="range" id="bar-price" name="bar-price" min="0" max="100" value="50" step="5" class="slider"/>
+          <div id="selector-mobile">
+            <div class="selectBtn"><i class="fas fa-caret-left"></i><i class="fas fa-caret-right"></i></div>
           </div>
-        </div>
-        <p class="month"><span>$16.00 </span>  /month</p>
+          <div id="progressBar-mobile"></div>
+        </div> -->
+
+        <p class="month"><span id="rangeValue">16</span>  /month</p>
       </header>
       <div class="body">
-        <div class="tariff-bar">
-          <div class="bar">
-            <div class="value-bar">
-              <div class="btn-value-bar"><i class="fas fa-caret-left"></i><i class="fas fa-caret-right"></i></div>
+        <!-- <div class="tariff-bar"> -->
+          <div class="bar-slider">
+            <input type="range" id="bar-price" name="bar-price" min="0" max="100" value="50" step="5" class="slider"/>
+            <div id="selector">
+              <div class="selectBtn"><i class="fas fa-caret-left"></i><i class="fas fa-caret-right"></i></div>
             </div>
+            <div id="progressBar"></div>
           </div>
-        </div>
+        <!-- </div> -->
         <div class="infos-bar">
           <div class="monthly-billing"><p>Monthly Billing</p><div class="toggle"><div class="circle-toggle"></div></div></div>
           <p class="yearly-billing"> Yearly Billing <span class="badge">25% discount</span><span class="badge-mobile">-25%</span></p>
@@ -53,5 +56,46 @@
         <button class="btn-start">Start my trial</button>
       </footer>
     </section>
+
+    <script type="text/javascript">
+    var input = document.getElementById('bar-price'), output = document.getElementById('rangeValue');
+    var viewPages = document.getElementById('page-view')     
+    var selector = document.getElementById("selector");
+    var progressBar = document.getElementById("progressBar");
+
+
+      input.oninput = function(){
+        switch (this.value) {
+          case "0": 
+            viewPages.innerHTML="10K";
+            output.innerHTML = "8";
+            break;
+          case "25":
+            viewPages.innerHTML="50K";
+            output.innerHTML = "12";
+
+            break;
+          case "50":
+            viewPages.innerHTML="100K";
+            output.innerHTML = "16";
+            console.log(this.value)
+            break;
+          case "75":
+            viewPages.innerHTML="1000K";
+            output.innerHTML = "24";
+
+            break;
+          case "100": 
+            viewPages.innerHTML="1M";
+            output.innerHTML = "36";
+            break;
+            default:
+              console.log("rien")
+        }
+        selector.style.left = this.value + "%";
+        progressBar.style.width = this.value + "%";
+      }
+      input.oninput()
+    </script>
   </body>
 </html>

@@ -44,8 +44,8 @@ body {
         h1, p {
             z-index: 5;
         }
-
     }
+
     .main {
         position: absolute;
         margin: auto;
@@ -66,10 +66,9 @@ body {
                 font-weight: $weight-normal;
                 font-size: 15px;
                 letter-spacing: 2px;
-            }
-            .tariff-bar-mobile {
-                display: none;
-                @extend .tariff-bar;
+                span {
+                    margin-right: 10px;
+                }
             }
             .month {
                 font-size: 15px;

@@ -1,49 +1,154 @@
-.tariff-bar {
-    height: 50px;
-    width: 100%;
-    padding-bottom: 3%;
-    .bar {
-        height: 10px;
-        width: 80%;
-        margin: auto;
-        border-radius: 60px;
-        background-color: $light-grayish-blue-slider;
-        .value-bar {
-            width: 50%;
-            height: 10px;
-            border-radius: 60px;
-            background-color: $soft-cyan;
-            position: relative;
-            display: flex;
-            align-items: center;
+// .tariff-bar {
+//     height: 50px;
+//     width: 100%;
+//     padding-bottom: 3%;
+//     .bar {
+//         height: 10px;
+//         width: 80%;
+//         margin: auto;
+//         border-radius: 60px;
+//         background-color: $light-grayish-blue-slider;
+//         .value-bar {
+//             width: 50%;
+//             height: 10px;
+//             border-radius: 60px;
+//             background-color: $soft-cyan;
+//             position: relative;
+//             display: flex;
+//             align-items: center;
             
-        }
-        .value-bar .btn-value-bar {
-            width: 40px;
-            height: 40px;
-            background-color: $strong-cyan;
-            position: absolute;
-            right: 0;
-            border-radius: 50px;
-            box-shadow: -2px 15px 20px $soft-cyan;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            &:hover {
-                cursor: pointer;
-            }
-            i {
-                color: $soft-cyan;
-            }
-        }
+//         }
+//         .value-bar .btn-value-bar {
+//             width: 40px;
+//             height: 40px;
+//             background-color: $strong-cyan;
+//             position: absolute;
+//             right: 0;
+//             border-radius: 50px;
+//             box-shadow: -2px 15px 20px $soft-cyan;
+//             display: flex;
+//             justify-content: space-around;
+//             align-items: center;
+//             &:hover {
+//                 cursor: pointer;
+//             }
+//             i {
+//                 color: $soft-cyan;
+//             }
+//         }
+//     }
+// }
+
+// .tariff-bar-mobile {
+//     @extend .tariff-bar;
+//     padding-top: 16%;
+//     .bar {
+//         width: 100%!important;
+//     }
+ 
+// }
+
+.bar-slider, .bar-slider-mobile {
+    display: flex;
+     margin-bottom: 7%;
+     position: relative;
+     width: 80%;
+     margin: auto;
+     margin-bottom: 9%;
+     .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 12px; 
+        outline: none;
+        border-radius: 50px;
+        background: $light-grayish-blue-slider
+     }
+     .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 3;
+        position: relative;
+     }
+     
+     input::-moz-range-thumb {
+        background-color: transparent;
+        width: 68px;
+        height: 68px;
+        cursor: pointer;
+        z-index: 900;
+        position: relative;
+        border: none;
     }
+     #selector {
+         pointer-events: none;
+         height: 104px;
+         width: 48px;
+         position: absolute;
+         bottom: -20px;
+         left: 50%;
+         transform: translateX(-50%);
+         z-index: 2;
+         .selectBtn {
+             height: 48px;
+             width: 48px;
+             border-radius: 50px;
+             position: absolute;
+             bottom: 0;
+             background-color: $strong-cyan;
+             display: flex;
+             justify-content: space-around;
+             align-items: center;
+             box-shadow: -1px 11px 22px #a5f3eb;
+             i {
+                color: $soft-cyan;
+             }
+         }
+     }
+     #progressBar {
+         width: 50%;
+         height: 12px;
+         background-color: $soft-cyan;
+         border-radius: 50px;
+         position: absolute;
+         top: 2px;
+         left: 0;
+     }
+
+    // #bar-price {
+
+
 }
 
-.tariff-bar-mobile {
-    @extend .tariff-bar;
-    padding-top: 16%;
-    .bar {
-        width: 100%!important;
-    }
+// .bar-slider-mobile {
+//     // @extend .bar-slider;
+//     padding-top: 16%;
+//     #selector-mobile {
+//         pointer-events: none;
+//         height: 104px;
+//         width: 48px;
+//         position: absolute;
+//         bottom: -20px;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         z-index: 2;
+//         .selectBtn {
+//             height: 48px;
+//             width: 48px;
+//             border-radius: 50px;
+//             position: absolute;
+//             bottom: 0;
+//             background-color: $strong-cyan;
+//             display: flex;
+//             justify-content: space-around;
+//             align-items: center;
+//             box-shadow: -1px 11px 22px #a5f3eb;
+//             i {
+//                color: $soft-cyan;
+//             }
+//         }
+//     }
+
  
-}
+// }
