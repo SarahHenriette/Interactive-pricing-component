@@ -1,3 +1,7 @@
+# Demo de ma réalisation en cliquant sur le lien suivant :
+https://sarahhenriette.github.io/Interactive-pricing-component/
+
+
 # Frontend Mentor - Interactive pricing component
 
 ![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)
