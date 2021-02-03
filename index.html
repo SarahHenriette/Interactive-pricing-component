@@ -29,7 +29,13 @@
             <div id="progressBar"></div>
         </div>
         <div class="infos-bar">
-          <div class="monthly-billing"><p>Monthly Billing</p><div class="toggle"><div class="circle-toggle"></div></div></div>
+          <div class="monthly-billing">
+            <p>Monthly Billing</p>
+            <label class="switch">
+              <input type="checkbox" id="slider-toggle">
+              <span class="slider-toggle"></span>
+            </label>
+          </div>
           <p class="yearly-billing"> Yearly Billing <span class="badge">25% discount</span><span class="badge-mobile">-25%</span></p>
         </div>
         <div class="hr"></div>  
@@ -44,44 +50,59 @@
     </section>
 
     <script type="text/javascript">
-    var input = document.getElementById('bar-price'), output = document.getElementById('rangeValue');
-    var viewPages = document.getElementById('page-view')     
-    var selector = document.getElementById("selector");
-    var progressBar = document.getElementById("progressBar");
+    let slideBar = document.getElementById('bar-price'), output = document.getElementById('rangeValue');
+    let viewPages = document.getElementById('page-view')     
+    let selector = document.getElementById("selector");
+    let progressBar = document.getElementById("progressBar");
+    let sliderToggle = document.getElementById("slider-toggle")
+    let price = 0;
 
-
-      input.oninput = function(){
+      slideBar.oninput = function(){
         switch (this.value) {
           case "0": 
-            viewPages.innerHTML="10K";
-            output.innerHTML = "$8.00";
+            display("10K", 8)
             break;
           case "25":
-            viewPages.innerHTML="50K";
-            output.innerHTML = "$12.00";
-
+            display("50K", 12)
             break;
           case "50":
-            viewPages.innerHTML="100K";
-            output.innerHTML = "$16.00";
-            console.log(this.value)
+            display("100K", 16)
             break;
           case "75":
-            viewPages.innerHTML="1000K";
-            output.innerHTML = "$24.00";
-
+            display("1000K", 24)
             break;
           case "100": 
-            viewPages.innerHTML="1M";
-            output.innerHTML = "$36.00";
+            display("1000K", 36)
             break;
             default:
               console.log("rien")
         }
         selector.style.left = this.value + "%";
         progressBar.style.width = this.value + "%";
+
       }
-      input.oninput()
+      slideBar.oninput()
+
+      function display(views, valuePrice){
+        viewPages.innerHTML = views;
+        reducePrice25(valuePrice)
+      }
+
+      function reducePrice25(valuePrice) {
+        if(sliderToggle.checked == true){
+          output.innerHTML= "$" + (valuePrice*25)/100 + ".00"
+        }
+        else{
+          output.innerHTML= "$" + valuePrice + ".00";
+        }
+        price = valuePrice;
+      }
+
+      sliderToggle.addEventListener('change', (e)=> {
+          reducePrice25(price)
+      })
+
+
     </script>
   </body>
 </html>
