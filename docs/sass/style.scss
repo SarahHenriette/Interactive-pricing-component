@@ -8,6 +8,7 @@ body {
     font-family: 'Manrope', sans-serif;
     margin: 0;
     position: relative;
+    height: 850px;
     background-color: $very-pale-blue;
     p{
         font-size: 15px;
@@ -18,8 +19,10 @@ body {
     }
     .img-background {
         overflow: hidden;
+        height: 570px;
         img{
             width: 100%;
+            height: 100%;
         }
     }
     .header {
@@ -51,7 +54,7 @@ body {
         margin: auto;
         left: 0;
         right: 0;
-        top: 55%;
+        top: 38%;
         width: 35%;
         height: auto;
         border-radius: 15px;
@@ -61,6 +64,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 0.5fr 0.5fr 0.2fr 0.5fr;
+        overflow: hidden;
         .page-views {
             grid-column: 1 / span 1;
             grid-row: 1 / span 1;
@@ -111,9 +115,10 @@ body {
             grid-column: 1 / span 2;
             grid-row: 4 / span 1;
             background-color: $light-grayish-blue-slider;
-            margin: 0;
             width: 100%;
-            height: 1px;
+            padding: 0 57px;
+            height: 1.5px;
+            margin-left: -57px;
         }
         footer {
             grid-column: 1 / span 2;

@@ -141,6 +141,7 @@ body {
   font-family: "Manrope", sans-serif;
   margin: 0;
   position: relative;
+  height: 850px;
   background-color: #fafbff;
 }
 body p {
@@ -152,9 +153,11 @@ body p {
 }
 body .img-background {
   overflow: hidden;
+  height: 570px;
 }
 body .img-background img {
   width: 100%;
+  height: 100%;
 }
 body .header {
   position: absolute;
@@ -185,7 +188,7 @@ body .main {
   margin: auto;
   left: 0;
   right: 0;
-  top: 55%;
+  top: 38%;
   width: 35%;
   height: auto;
   border-radius: 15px;
@@ -195,6 +198,7 @@ body .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 0.5fr 0.5fr 0.2fr 0.5fr;
+  overflow: hidden;
 }
 body .main .page-views {
   grid-column: 1/span 1;
@@ -246,9 +250,10 @@ body .main .hr {
   grid-column: 1/span 2;
   grid-row: 4/span 1;
   background-color: #eaeefb;
-  margin: 0;
   width: 100%;
-  height: 1px;
+  padding: 0 57px;
+  height: 1.5px;
+  margin-left: -57px;
 }
 body .main footer {
   grid-column: 1/span 2;
@@ -344,6 +349,7 @@ body .main footer .active:focus {
     padding: 20px 30px;
     height: 528px;
     margin-top: -41px;
+    top: 33%;
   }
   body .main .page-views {
     justify-content: center;
@@ -374,7 +380,7 @@ body .main footer .active:focus {
     margin-top: 4%;
   }
   body .main .infos-bar p {
-    font-size: 12px;
+    font-size: 11px;
   }
   body .main .infos-bar .monthly-billing {
     margin-right: 10px;
@@ -387,7 +393,6 @@ body .main footer .active:focus {
   }
   body .main .hr {
     grid-row: 5/span 1;
-    margin: 1% 0 0 0;
   }
   body .main footer {
     flex-direction: column;

@@ -63,6 +63,7 @@
             padding: 20px 30px;
             height: 528px;
             margin-top: -41px;
+            top: 33%;
                 .page-views {
                     justify-content: center;
                     font-size: 13px;
@@ -91,7 +92,7 @@
                     justify-content: center;
                     margin-top: 4%;
                     p {
-                        font-size: 12px;
+                        font-size: 11px;
                     }
                     .monthly-billing {
                         margin-right: 10px;
@@ -107,7 +108,7 @@
                 }
                 .hr {
                     grid-row: 5 / span 1;
-                    margin: 1% 0 0 0;
+                    // margin: 1% 0 0 0;
 
                 }
             footer {
