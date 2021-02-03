@@ -45,7 +45,7 @@
             <p><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>100% data ownership</p>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>Email reports</p>
           </div>
-          <button class="btn-start">Start my trial</button>
+          <button class="btn-start" id="btn-start" >Start my trial</button>
       </footer> 
     </section>
 
@@ -55,6 +55,7 @@
     let selector = document.getElementById("selector");
     let progressBar = document.getElementById("progressBar");
     let sliderToggle = document.getElementById("slider-toggle")
+    let btnStart = document.getElementById('btn-start')
     let price = 0;
 
       slideBar.oninput = function(){
@@ -91,9 +92,15 @@
       function reducePrice25(valuePrice) {
         if(sliderToggle.checked == true){
           output.innerHTML= "$" + (valuePrice*25)/100 + ".00"
+          btnStart.classList.add('active')
+          btnStart.addEventListener('click', ()=> {
+            alert("La remise a bien été effectué")
+          })
         }
         else{
           output.innerHTML= "$" + valuePrice + ".00";
+          btnStart.classList.remove('active')
+
         }
         price = valuePrice;
       }
@@ -101,8 +108,7 @@
       sliderToggle.addEventListener('change', (e)=> {
           reducePrice25(price)
       })
-
-
+      
     </script>
   </body>
 </html>

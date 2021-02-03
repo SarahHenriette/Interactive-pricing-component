@@ -138,6 +138,16 @@ body {
                 font-size: 14px;
                 font-weight: $weight-normal;
             }
+            .btn-start:focus {
+                outline: none;
+            }
+            .active {
+                cursor: pointer;
+                color: $white;
+            }
+            .active:focus {
+                outline: none;
+            }
         }
     }
 }
