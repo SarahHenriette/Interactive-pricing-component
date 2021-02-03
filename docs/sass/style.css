@@ -380,7 +380,7 @@ body .main footer .active:focus {
     margin-top: 4%;
   }
   body .main .infos-bar p {
-    font-size: 11px;
+    font-size: 10px;
   }
   body .main .infos-bar .monthly-billing {
     margin-right: 10px;
@@ -404,6 +404,7 @@ body .main footer .active:focus {
     flex-direction: column;
     align-items: center;
     line-height: 27px;
+    font-size: 13px;
   }
   body .main footer .btn-start {
     margin-top: 40px;
