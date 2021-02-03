@@ -1,6 +1,5 @@
 # Demo de ma réalisation en cliquant sur le lien suivant :
-https://sarahhenriette.github.io/Interactive-pricing-component/
-
+https://interactive-pricing-component-five.vercel.app/
 
 # Frontend Mentor - Interactive pricing component
 
