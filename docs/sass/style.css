@@ -404,7 +404,7 @@ body .main footer .active:focus {
     flex-direction: column;
     align-items: center;
     line-height: 27px;
-    font-size: 13px;
+    font-size: 12px;
   }
   body .main footer .btn-start {
     margin-top: 40px;
