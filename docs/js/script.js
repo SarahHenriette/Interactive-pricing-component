@@ -39,7 +39,9 @@ let price = 0;
 
   function reducePrice25(valuePrice) {
     if(sliderToggle.checked == true){
-      output.innerHTML= "$" + (valuePrice*25)/100 + ".00"
+      let valuePurcent= valuePrice - (valuePrice*25)/100;
+      console.log(valuePurcent)
+      output.innerHTML= "$" + valuePurcent + ".00"
       btnStart.classList.add('active')
       btnStart.addEventListener('click', ()=> {
         alert("La remise a bien été effectué")
